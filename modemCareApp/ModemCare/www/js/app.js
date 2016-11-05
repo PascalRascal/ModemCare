@@ -24,6 +24,9 @@ angular.module('starter', ['ionic', 'ion-floating-menu'])
   })
 
   .controller('TheCtrl', function ($scope) {
+
+    $scope.viewForms = true;
+
     $scope.forms = [
       { index: 0, name: "basic medical records", added: true },
       { index: 1, name: "past conditions", added: false },
@@ -45,11 +48,23 @@ angular.module('starter', ['ionic', 'ion-floating-menu'])
       $scope.forms[index].added = false;
       // $scope.varWord = $scope.varWord + index;
     };
+
+    $scope.mainDoc = $scope.forms[0];
+    $scope.setViewDoc = function(index) {
+      $scope.viewForms = false;
+      $scope.mainDoc = $scope.forms[index];
+    };
+
+
+    $scope.myEvent = function (index) {
+      console.log("I HAVE YOU NOW MOTHERFUCKER");
+    };
   })
 
-var myEvent = function () {
-  console.log("fug");
-}
+//THIS DOES NOT DO SHIT. IT'S OUT OF FUCKING SCOPE. YOU NEED FUCKING SCOPE.
+// var myEvent = function () {
+//   console.log("fug");
+// }
 
   .controller('StaticPageCtrl', function ($scope, $http, $location) {
     $http.get('medical-record1.json').then(function (data) {

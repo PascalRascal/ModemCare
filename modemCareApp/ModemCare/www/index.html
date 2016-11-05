@@ -54,6 +54,12 @@
       <h1 class="title">ModemCare</h1>
     </ion-header-bar>
 
+
+
+
+    <div ng-show="viewForms">
+
+
     <!-- was ion-plus -->
     <ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-paper-airplane" iconColor="#fff">
 
@@ -68,9 +74,9 @@
 
               <div class="item item-button-right">
                 {{item.name}}
-                <button class="button button-positive" ng-click="myEvent()">
-      <i class="icon ion-paper-airplane"></i>
-    </button>
+                <button class="button button-positive" ng-click="setViewDoc(item.index)">
+                  <i class="icon ion-document-text"></i>
+                </button>
               </div>
 
               <label class="button checkbox">
@@ -83,6 +89,18 @@
 
       </div>
     </ion-content>
+
+
+    </div>
+
+    <div ng-show="!viewForms">
+      <ion-content>
+        ANOTHER VIEW
+      </ion-content>
+    </div>
+
+
+
   </ion-pane>
 </body>
 
