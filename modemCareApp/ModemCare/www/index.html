@@ -54,7 +54,8 @@
       <h1 class="title">ModemCare</h1>
     </ion-header-bar>
 
-    <ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" iconColor="#fff">
+    <!-- was ion-plus -->
+    <ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-paper-airplane" iconColor="#fff">
 
     </ion-floating-button>
     <ion-content>
@@ -64,7 +65,7 @@
 
           <div ng-repeat="item in forms" class="padding">
             <div class="item item-button-left">
-              {{item}}
+              <div>{{item.name}}</div>
               <label class="button checkbox">
   <input type="checkbox">
   </label>
@@ -79,4 +80,4 @@
 </body>
 
 </html>
-0
+
