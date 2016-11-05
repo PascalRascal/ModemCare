@@ -24,10 +24,11 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('TheCtrl', function($scope) {
+  $scope.forms = ["basic medical records", "past conditions", "eye doctor"];
   $scope.varWord = "say this";
 
   $scope.changeFn = function() {
-    $scope.varWord = "FUNCTION CALLED";
+    $scope.varWord = $scope.varWord + "!";
   };
 })
 

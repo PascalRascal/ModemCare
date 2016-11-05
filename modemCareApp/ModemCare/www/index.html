@@ -44,9 +44,44 @@
       </ion-header-bar>
       <ion-content>
         <div ng-controller="TheCtrl as thing">
+          
 
-          {{varWord}}
+
+          <ion-list>
+            <ion-item ng-repeat="item in forms">
+              <div>{{item}}</div>
+              <button ion-button ng-click="changeFn()">Yee!</button>
+              <button ion-button ng-click="changeFn()">Yee!</button>
+            </ion-item>
+          </ion-list>
+
+          <!-- <ion-card ng-repeat="item in forms">
+            <ion-card-content>
+              {{item}}
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card>
+            <ion-card-content>
+              Testing
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Testing
+            </ion-card-content>
+          </ion-card> -->
+
+
+
+          <br><br><br><br>
+          {{varWord}}<br>
           <button ion-button ng-click="changeFn()">Do the thing!</button>
+
+          <ion-item>
+            <ion-label>{{item}}</ion-label>
+            <ion-checkbox checked="true"></ion-checkbox>
+          </ion-item>
 
         </div>
       </ion-content>
