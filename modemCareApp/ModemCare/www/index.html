@@ -65,10 +65,12 @@
 
           <div ng-repeat="item in forms" class="padding">
             <div class="item item-button-left">
-              <div>{{item.name}}</div>
+              <span class="icon ion-paper-airplane" click="myEvent()"></span>
+
+              {{item.name}}
               <label class="button checkbox">
-  <input type="checkbox">
-  </label>
+                <input type="checkbox">
+              </label>
             </div>
           </div>
 

@@ -1,11 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>No Lines</ion-title>
-  </ion-navbar>
-</ion-header>
+<body ng-controller="StaticPageCtrl">
+  <div class="bar bar-header bar-royal">
+    <h1 class="title">{{ formName }}</h1>
+  </div>
 
-<ion-content>
-    <ion-list no-lines>
-      <ion-item>{{ }}</ion-item>
-    </ion-list>
-</ion-content>
+  <div class="list card" ng-repeat="formFields as field">
+
+    <a href="#" class="item item-icon-left">
+      {{ field.key + ": " + field.value }}
+    </a>
+
+  </div>
+
+  <ion-floating-button ng-click="editForm('/edit-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
+  </ion-floating-button>
+
+</body>
