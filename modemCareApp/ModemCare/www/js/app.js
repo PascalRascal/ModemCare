@@ -24,7 +24,10 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('TheCtrl', function($scope) {
-  $scope.forms = ["basic medical records", "past conditions", "eye doctor"];
+  $scope.forms = [
+    {index:0, name:"basic medical records", added:true},
+    {index:1, name:"past conditions", added:false},
+    {index:2, name:"eye doctor", added:false}];
   $scope.varWord = "say this";
 
   $scope.changeFn = function() {
@@ -32,6 +35,15 @@ angular.module('starter', ['ionic'])
     var transmit = Quiet.transmitter({ profile: "audible", onFinish: onFinish });
     transmit.transmit(Quiet.str2ab("fug xd"));
     $scope.varWord = $scope.varWord + "!";
+  };
+
+  $scope.addMe = function(index) {
+    $scope.forms[index].added = true;
+    // $scope.varWord = $scope.varWord + index;
+  };
+  $scope.removeMe = function(index) {
+    $scope.forms[index].added = false;
+    // $scope.varWord = $scope.varWord + index;
   };
 })
 

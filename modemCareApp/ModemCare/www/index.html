@@ -54,9 +54,10 @@
 
           <ion-list>
             <ion-item ng-repeat="item in forms">
-              <div>{{item}}</div>
-              <button ion-button ng-click="changeFn()">Yee!</button>
-              <button ion-button ng-click="changeFn()">Yee!</button>
+              <div>{{item.name}} - {{item.added ? "SEND" : "KEEP"}}</div>
+              <button ion-button ng-show="item.added" ng-click="removeMe({{item.index}})">Remove</button>
+              <button ion-button ng-show="!item.added" ng-click="addMe({{item.index}})">Add</button>
+              <button ion-button ng-click="changeFn()">Edit</button>
             </ion-item>
           </ion-list>
 
