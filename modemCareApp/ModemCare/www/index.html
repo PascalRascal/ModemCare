@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
 
-    <link rel="manifest" href="manifest.json">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
 
-    <!-- un-comment this code to enable service worker
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
@@ -16,81 +17,66 @@
       }
     </script>-->
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css" />
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
 
-    <script type="text/javascript" src="js/quiet.js"></script>
-    <script type="text/javascript" src="js/quiet-init.js"></script>
-    <script async type="text/javascript" src="js/quiet-emscripten.js"></script>
-
-    <script type="text/javascript>" src="js/receiveText.js"></script>
-    <script type="text/javascript>" src="js/sendtext.js"></script>
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
+  <script type="text/javascript" src="js/quiet.js"></script>
+  <script type="text/javascript" src="js/quiet-init.js"></script>
+  <script async type="text/javascript" src="js/quiet-emscripten.js"></script>
+  <script src="lib/ion-floating-menu/dist/ion-floating-menu.js" type="text/javascript"></script>
 
 
-  </head>
-  <body ng-app="starter">
+  <script type="text/javascript>" src="js/receiveText.js"></script>
+  <script type="text/javascript>" src="js/sendtext.js"></script>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">ModemCare</h1>
-      </ion-header-bar>
-      <ion-content>
-        <div ng-controller="TheCtrl as thing">
-          
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
 
 
-          <ion-list>
-            <ion-item ng-repeat="item in forms">
-              <div>{{item.name}} - {{item.added ? "SEND" : "KEEP"}}</div>
-              <button ion-button ng-show="item.added" ng-click="removeMe({{item.index}})">Remove</button>
-              <button ion-button ng-show="!item.added" ng-click="addMe({{item.index}})">Add</button>
-              <button ion-button ng-click="changeFn()">Edit</button>
-            </ion-item>
-          </ion-list>
+</head>
 
-          <!-- <ion-card ng-repeat="item in forms">
-            <ion-card-content>
+<body ng-app="starter">
+
+  <ion-pane ng-controller="TheCtrl as thing">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">ModemCare</h1>
+    </ion-header-bar>
+
+    <ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" iconColor="#fff">
+
+    </ion-floating-button>
+    <ion-content>
+      <div>
+
+        <div class="list">
+
+          <div ng-repeat="item in forms" class="padding">
+            <div class="item item-button-left">
               {{item}}
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card>
-            <ion-card-content>
-              Testing
-            </ion-card-content>
-          </ion-card>
-          <ion-card>
-            <ion-card-content>
-              Testing
-            </ion-card-content>
-          </ion-card> -->
-
-
-
-          <br><br><br><br>
-          {{varWord}}<br>
-          <button ion-button ng-click="changeFn()">Do the thing!</button>
-
-          <ion-item>
-            <ion-label>{{item}}</ion-label>
-            <ion-checkbox checked="true"></ion-checkbox>
-          </ion-item>
+              <label class="button checkbox">
+  <input type="checkbox">
+  </label>
+            </div>
+          </div>
 
         </div>
-      </ion-content>
-    </ion-pane>
-  </body>
+
+      </div>
+    </ion-content>
+  </ion-pane>
+</body>
+
 </html>
+0

@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'ion-floating-menu'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,6 +29,10 @@ angular.module('starter', ['ionic'])
     {index:1, name:"past conditions", added:false},
     {index:2, name:"eye doctor", added:false}];
   $scope.varWord = "say this";
+  $scope.myEvent = function(){
+    console.log("SHIT");
+  }
+
 
   $scope.changeFn = function() {
     var onFinish = function () { console.log("finished transmitting!") };
@@ -46,4 +50,9 @@ angular.module('starter', ['ionic'])
     // $scope.varWord = $scope.varWord + index;
   };
 })
+
+var myEvent = function(){
+  console.log("fug");
+}
+
 
