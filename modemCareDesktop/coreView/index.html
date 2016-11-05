@@ -14,6 +14,17 @@
   <script type="text/javascript" src="javascripts/receivetext.js"></script>
   <link rel="stylesheet" href="stylesheets/font-awesome.css">
   <link rel="stylesheet" href="stylesheets/font-awesome-animation.css">
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.6/angular2-polyfills.js"></script>
+  <script src="https://code.angularjs.org/tools/system.js"></script>
+  <script src="https://code.angularjs.org/tools/typescript.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
+  <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <script src="javascripts/app.js"></script>
   <script src="javascripts/addDocument.js"></script>
 
   <!--[if lt IE 9]>
@@ -22,45 +33,44 @@
 </head>
 
 <body>
+  <div ng-app="modemApp">
+  <div ng-controller="TheCtrl as modemCtrl">
+
   <div id="sidebar-wrapper">
     <ul id="sidebar"class="sidebar-nav">
+
       <li class="sidebar-brand">
         <a href="#">
                         Documents
                     </a>
       </li>
-      <li>
-        <a href="#">Dashboard</a>
-      </li>
-      <li>
-        <a href="#">Shortcuts</a>
-      </li>
-      <li>
-        <a href="#">Overview</a>
-      </li>
-      <li>
-        <a href="#">Events</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
+
+      <!--  <li ng-repeat="todo in todoList.todos"> -->
+      <!--<li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc({{doc.index}})">{{doc.name}}</a></li> -->
+      <li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc(doc.index)">{{doc.name}}</a></li>
+
+
     </ul>
   </div>
   <div id="startListening" class="startListening center-block" style="text-align: center">
-    <i id="mainIcon" class="fa fa-stethoscope" aria-hidden="true"></i>
-    <br>
-    <div id="userPrompt">
-      Start Listening!
+    
+    <div ng-show="modemCtrl.showMain">
+      <i id="mainIcon" class="fa fa-stethoscope" aria-hidden="true"></i>
+      <br>
+      <div id="userPrompt">
+        Start Listening!
+      </div>
     </div>
+
+    <div ng-show="!modemCtrl.showMain">
+      {{modemCtrl.mainDoc.data}}
+    </div>
+
+
   </div>
 
-
+</div>
+</div>
 </body>
 
 </html>
