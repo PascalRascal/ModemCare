@@ -27,6 +27,9 @@ angular.module('starter', ['ionic'])
   $scope.varWord = "say this";
 
   $scope.changeFn = function() {
+    var onFinish = function () { console.log("finished transmitting!") };
+    var transmit = Quiet.transmitter({ profile: "audible", onFinish: onFinish });
+    transmit.transmit(Quiet.str2ab("fug xd"));
     $scope.varWord = "FUNCTION CALLED";
   };
 })
