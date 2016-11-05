@@ -1,0 +1,20 @@
+<body ng-controller="StaticPageCtrl">
+    <div class="bar bar-header bar-royal">
+        <h1 class="title">{{ formName }}</h1>
+    </div>
+    <div class="list card" ng-repeat="formFields as field">
+
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">{{ field.key }}</span>
+            <input type="text" value="field.value">
+         </label>
+        <a href="#" class="item item-icon-left">
+      {{ field.key + ": " + field.value }}
+    </a>
+
+    </div>
+
+    <ion-floating-button ng-click="saveForm()" has-footer="false" button-color="#2AC9AA" icon="ion-checkmark" iconColor="#fff">
+    </ion-floating-button>
+
+</body>
