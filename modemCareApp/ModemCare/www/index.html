@@ -19,6 +19,8 @@
 
   <link href="lib/ionic/css/ionic.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css" />
+
 
   <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -33,6 +35,8 @@
   <script type="text/javascript" src="js/quiet.js"></script>
   <script type="text/javascript" src="js/quiet-init.js"></script>
   <script async type="text/javascript" src="js/quiet-emscripten.js"></script>
+  <script src="lib/ion-floating-menu/dist/ion-floating-menu.js" type="text/javascript"></script>
+
 
   <script type="text/javascript>" src="js/receiveText.js"></script>
   <script type="text/javascript>" src="js/sendtext.js"></script>
@@ -45,43 +49,29 @@
 
 <body ng-app="starter">
 
-  <ion-pane>
+  <ion-pane ng-controller="TheCtrl as thing">
     <ion-header-bar class="bar-stable">
       <h1 class="title">ModemCare</h1>
     </ion-header-bar>
+
+    <ion-floating-button click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" iconColor="#fff">
+
+    </ion-floating-button>
     <ion-content>
-      <div ng-controller="TheCtrl as thing">
+      <div>
 
         <div class="list">
 
-          <div ng-repeat="item in forms" class="item item-button-right">
-            Call Ma
-            <button class="button button-positive">
-             <i class="icon ion-ios-telephone"></i>
-            </button>
+          <div ng-repeat="item in forms" class="padding">
+            <div class="item item-button-left">
+              {{item}}
+              <label class="button checkbox">
+  <input type="checkbox">
+  </label>
+            </div>
           </div>
 
         </div>
-
-
-        <!--
-        <ion-list>
-          <ion-item ng-repeat="item in forms">
-            <div>{{item}}</div>
-            <button ion-button ng-click="changeFn()">Yee!</button>
-            <button ion-button ng-click="changeFn()">Yee!</button>
-          </ion-item>
-        </ion-list>
-        -->
-
-        <br><br><br><br> {{varWord}}
-        <br>
-        <button ion-button ng-click="changeFn()">Do the thing!</button>
-
-        <ion-item>
-          <ion-label>{{item}}</ion-label>
-          <ion-checkbox checked="true"></ion-checkbox>
-        </ion-item>
 
       </div>
     </ion-content>
