@@ -26,11 +26,8 @@ angular.module('starter', ['ionic'])
 .controller('TheCtrl', function($scope) {
   $scope.varWord = "say this";
 
-  $scope.tasks = [
-    { title: 'Collect coins' },
-    { title: 'Eat mushrooms' },
-    { title: 'Get high enough to grab the flag' },
-    { title: 'Find the Princess' }
-  ];
+  $scope.changeFn = function() {
+    $scope.varWord = "FUNCTION CALLED";
+  };
 })
 
