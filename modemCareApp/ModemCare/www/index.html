@@ -61,11 +61,14 @@
 
 
 
+
+
+
     <div ng-show="viewForms">
 
 
     <!-- was ion-plus -->
-    <ion-floating-button click="transmitData()" has-footer="false" button-color="#502274" icon="ion-paper-airplane" iconColor="#dedede">
+    <ion-floating-button click="transmitData()" bottom="10" has-footer="false" button-color="#502274" icon="ion-paper-airplane" iconColor="#dedede">
     </ion-floating-button>
     <ion-content>
       <div>
@@ -92,6 +95,50 @@
 
 
     </div>
+
+    
+
+
+
+
+
+
+
+    <div ng-show="viewEditDoc">
+      <ion-header-bar class="bar-royal">
+        <a ng-click="setViewForms()" class="button icon-left ion-chevron-left button-clear">&nbsp;&nbsp;Back</a>
+        <h1 class="title">{{ mainDoc.name }}</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+
+        <div class="list card" ng-repeat="field in mainDoc.formData.fields">
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label"><b>{{ field.key }}</b></span>
+              <input type="text" ng-model="field.value" value="{{field.value}}">
+            </label>
+
+        </div>
+
+        
+        <!-- <ion-floating-button ng-click="setViewForms()" bottom="10" has-footer="false" button-color="#502274" icon="ion-checkmark" iconColor="#dedede">
+        </ion-floating-button> -->
+
+
+      </ion-content>
+
+      <ion-footer-bar class="bar-royal" ng-click="setViewForms()">
+        <h1 class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update</h1>
+      </ion-footer-bar>
+    </div>
+
+
+
+
+
+
 
     <div ng-show="viewStaticDoc">
 
@@ -127,33 +174,6 @@
       </ion-content>
     </div>
 
-
-
-    <div ng-show="viewEditDoc">
-      <ion-header-bar class="bar-royal">
-        <a ng-click="setViewForms()" class="button icon-left ion-chevron-left button-clear">&nbsp;&nbsp;Back</a>
-        <h1 class="title">{{ mainDoc.name }}</h1>
-      </ion-header-bar>
-
-      <ion-content>
-
-
-        <div class="list card" ng-repeat="field in mainDoc.formData.fields">
-
-            <label class="item item-input item-stacked-label">
-              <span class="input-label"><b>{{ field.key }}</b></span>
-              <input type="text" ng-model="field.value" value="{{field.value}}">
-            </label>
-
-        </div>
-
-        
-        <ion-floating-button ng-click="setViewForms()" has-footer="false" button-color="#502274" icon="ion-checkmark" iconColor="#dedede">
-        </ion-floating-button>
-
-
-      </ion-content>
-    </div>
 
 
 
