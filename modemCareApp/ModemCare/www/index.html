@@ -42,6 +42,7 @@
   <script type="text/javascript>" src="js/sendtext.js"></script>
 
   <!-- your app's js -->
+  <script src="js/services.js"></script>
   <script src="js/app.js"></script>
 
 
@@ -67,25 +68,19 @@
     <ion-content>
       <div>
 
-        <div class="list">
+        <ion-list can-swipe="true">
+                <ion-item ng-repeat="item in forms">
+                    <h2>{{item.name}}!</h2>
+                    <ion-option-button class="button-positive" ng-click="toggleShare(item)">
+                        Share
+                    </ion-option-button>
+                    <ion-option-button class="button-info" ng-click="setViewDoc(item)">
+                        Edit
+                    </ion-option-button>
 
-          <div ng-repeat="item in forms" class="padding">
-            <div class="item item-button-left">
+                </ion-item>
+            </ion-list>
 
-              <div class="item item-button-right">
-                {{item.name}}
-                <button class="button button-positive" ng-click="setViewDoc(item.index)">
-                  <i class="icon ion-document-text"></i>
-                </button>
-              </div>
-
-              <label class="button checkbox">
-                <input type="checkbox">
-              </label>
-            </div>
-          </div>
-
-        </div>
 
       </div>
     </ion-content>

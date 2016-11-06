@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'ion-floating-menu'])
+angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -23,14 +23,11 @@ angular.module('starter', ['ionic', 'ion-floating-menu'])
     });
   })
 
-  .controller('TheCtrl', function ($scope) {
+  .controller('TheCtrl', function ($scope, Forms) {
 
     $scope.viewForms = true;
 
-    $scope.forms = [
-      { index: 0, name: "basic medical records", added: true },
-      { index: 1, name: "past conditions", added: false },
-      { index: 2, name: "eye doctor", added: false }];
+    $scope.forms = Forms.all();
     $scope.varWord = "say this";
 
     $scope.transmitData = function () {
@@ -50,14 +47,16 @@ angular.module('starter', ['ionic', 'ion-floating-menu'])
     };
 
     $scope.mainDoc = $scope.forms[0];
-    $scope.setViewDoc = function(index) {
+    $scope.setViewDoc = function(item) {
+
       $scope.viewForms = false;
-      $scope.mainDoc = $scope.forms[index];
+      $scope.mainDoc = item;
+      console.log(item);
     };
 
 
     $scope.myEvent = function (index) {
-      console.log("I HAVE YOU NOW MOTHERFUCKER");
+      console.log("I HAVE YOU NOW");
     };
   })
 
