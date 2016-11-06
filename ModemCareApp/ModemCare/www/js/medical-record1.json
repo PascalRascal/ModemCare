@@ -1,6 +1,7 @@
 {
-    "name": "Basic Identification Information",
-    "fields": [
+    "name" : "Basic Identification Information",
+    "description" : "Please enter your identification and communication information.",
+    "fields" : [
         {
             "key": "First Name",
             "value": ""

@@ -1,0 +1,78 @@
+{
+    "name" : "Patient History",
+    "description" : "Please check the items that you ever have, or had.",
+    "conditions" : [
+        {
+            "condition": "anemia",
+            "value": false
+        },
+        {
+            "condition": "anorexia",
+            "value": false
+        },
+        {
+            "condition": "arthritis",
+            "value": false
+        },
+        {
+            "condition": "asthma",
+            "value": false
+        },
+        {
+            "condition": "cancer",
+            "value": false
+        },
+        {
+            "condition": "chicken pox",
+            "value": false
+        },
+        {
+            "condition": "depression",
+            "value": false
+        },
+        {
+            "condition": "diabetes",
+            "value": false
+        },
+        {
+            "condition": "eating problems",
+            "value": false
+        },
+        {
+            "condition": "epilepsy or seizures",
+            "value": false
+        },
+        {
+            "condition": "heart disease",
+            "value": false
+        },
+        {
+            "condition": "high/low blood pressure",
+            "value": false
+        },
+        {
+            "condition": "melanoma",
+            "value": false
+        },
+        {
+            "condition": "menstrual problems",
+            "value": false
+        },
+        {
+            "condition": "migraines",
+            "value": false
+        },
+        {
+            "condition": "sexually transmitted disease",
+            "value": false
+        },
+        {
+            "condition": "thyroid problems",
+            "value": false
+        },
+        {
+            "condition": "other",
+            "value": false
+        }
+    ]
+}
