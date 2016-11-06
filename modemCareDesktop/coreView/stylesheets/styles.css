@@ -8,6 +8,22 @@ body {
   color: #2F242C;
 }
 
+#addPatient{
+    position: absolute;
+    left: 150px;
+    top:0px;
+}
+#formData{
+    display: flex;
+    padding: 50x;
+    left: 50%;
+    width: 40%;
+    z-index: 1001;
+    background-color:	#c179b9;
+    box-shadow: 10px 10px 5px grey;
+
+    
+}
 #mainIcon{
   font-size: 20vw;
 }
@@ -15,6 +31,7 @@ body {
 #userPrompt{
   font-size: 5vw;
 }
+
 
 /*!
  * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
@@ -62,7 +79,6 @@ body {
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
