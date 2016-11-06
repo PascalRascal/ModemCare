@@ -93,7 +93,8 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
     };
 
     $scope.setEditDoc = function(item) {
-      //$scope.mainDoc = $scope.forms[item];
+      // $scope.mainDoc = $scope.forms[item];
+      $scope.mainDoc = item;
 
       $scope.viewForms = false;
       $scope.viewStaticDoc = false;

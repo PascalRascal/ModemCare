@@ -3,7 +3,7 @@ angular.module('modemHealth.Forms', [])
     .factory('Forms', function () {
         var forms = [{
             id: 0,
-            name: 'General Health Form',
+            name: 'Basic Identification Information',
             isShared: false,
             formData:
 {
@@ -23,118 +23,336 @@ angular.module('modemHealth.Forms', [])
         },
         {
             "key": "Date of Birth (MM/DD/YYYY)",
-            "value": ""
+            "value": "01/01/1987"
         },
         {
             "key": "Street Address",
-            "value": ""
+            "value": "1234 Whatever St."
         },
         {
             "key": "Apartment #",
-            "value": ""
+            "value": "116"
         },
         {
             "key": "City/Town",
-            "value": ""
+            "value": "Columbus"
         },
         {
             "key": "State",
-            "value": ""
+            "value": "OH"
         },
         {
             "key": "Zipcode",
-            "value": ""
+            "value": "12345"
         },
         {
             "key": "Patient email address",
-            "value": ""
+            "value": "person@place.com"
         },
         {
             "key": "Home phone number",
-            "value": ""
+            "value": "867-5309"
         },
         {
             "key": "Cell phone number",
-            "value": ""
+            "value": "867-5309"
         }
     ]
 }
         }, {
             id: 1,
-            name: 'Past Health Issues',
+            name: 'Patient History',
             isShared: false,
             formData:
 {
-    "name": "Basic Identification Information",
-    "fields": [
+    "name" : "Patient History",
+    "fields" : [
         {
-            "key": "First Name",
-            "value": "noel"
+            "key": "Anemia",
+            "value": "none"
         },
         {
-            "key": "Middle Name",
-            "value": ""
+            "key": "Anorexia",
+            "value": "none"
         },
         {
-            "key": "Last Name",
-            "value": ""
+            "key": "Arthritis",
+            "value": "none"
         },
         {
-            "key": "D.O.B. (MM/DD/YYYY)",
-            "value": ""
+            "key": "Asthma",
+            "value": "none"
         },
         {
-            "key": "Street Address",
-            "value": ""
+            "key": "Cancer",
+            "value": "none"
         },
         {
-            "key": "Apartment #",
-            "value": ""
+            "key": "Chicken pox",
+            "value": "none"
         },
         {
-            "key": "City/Town",
-            "value": ""
+            "key": "Depression",
+            "value": "none"
         },
         {
-            "key": "State",
-            "value": ""
+            "key": "Diabetes",
+            "value": "none"
         },
         {
-            "key": "Zipcode",
-            "value": ""
+            "key": "Eating problems",
+            "value": "none"
         },
         {
-            "key": "Patient email address",
-            "value": ""
+            "key": "Epilepsy or seizures",
+            "value": "none"
         },
         {
-            "key": "Home phone number",
-            "value": ""
+            "key": "Heart disease",
+            "value": "none"
         },
         {
-            "key": "Cell phone number",
-            "value": ""
+            "key": "High/low blood pressure",
+            "value": "none"
+        },
+        {
+            "key": "Melanoma",
+            "value": "none"
+        },
+        {
+            "key": "Menstrual problems",
+            "value": "none"
+        },
+        {
+            "key": "Migraines",
+            "value": "none"
+        },
+        {
+            "key": "Sexually transmitted disease",
+            "value": "none"
+        },
+        {
+            "key": "Thyroid problems",
+            "value": "none"
+        },
+        {
+            "key": "Other",
+            "value": "none"
         }
     ]
 }
         }, {
             id: 2,
-            name: 'Insurance Information',
+            name: 'Child Past Medical History',
             isShared: false,
-            formData: "tbd"
-
+            formData:
+{
+    "name": "Child Past Medical History",
+    "fields": [
+        {
+            "key": "Asthma/wheezing",
+            "value": "none"
+        },
+        {
+            "key": "Blood: anemia (iron deficiency, Sickle Cell, Thalessemia)",
+            "value": "none"
+        },
+        {
+            "key": "Blood transfusions",
+            "value": "none"
+        },
+        {
+            "key": "Chicken pox (Varicella)",
+            "value": "none"
+        },
+        {
+            "key": "Contusions",
+            "value": "none"
+        },
+        {
+            "key": "Convulsions",
+            "value": "none"
+        },
+        {
+            "key": "Fractures",
+            "value": "none"
+        },
+        {
+            "key": "German Measles (Rubella)",
+            "value": "none"
+        },
+        {
+            "key": "Hearing problems",
+            "value": "none"
+        },
+        {
+            "key": "Hospitalizations",
+            "value": "none"
+        },
+        {
+            "key": "Measles (Rubeola)",
+            "value": "none"
+        },
+        {
+            "key": "Meningitis",
+            "value": "none"
+        },
+        {
+            "key": "Mumps",
+            "value": "none"
+        },
+        {
+            "key": "Operations",
+            "value": "none"
+        },
+        {
+            "key": "Poison ingestion",
+            "value": "none"
+        },
+        {
+            "key": "Temper tantrums",
+            "value": "none"
+        },
+        {
+            "key": "Visual problems",
+            "value": "none"
+        },
+        {
+            "key": "Other serious medical illnesses",
+            "value": "none"
+        }
+    ]
+}
         }, {
             id: 3,
-            name: 'Dentist Information',
+            name: 'General Health Form',
             isShared: false,
-            formData: "tbd"
-
+            formData:
+{
+    "name": "General Health Form",
+    "fields": [
+        {
+            "key": "Reason for visit",
+            "value": "appointment/checkup"
+        },
+        {
+            "key": "Insurance provider",
+            "value": "Medical Mutual"
+        },
+        {
+            "key": "Social Security Number",
+            "value": "123-45-6789"
+        },
+        {
+            "key": "Contact Information",
+            "value": "867-5309"
+        }
+    ]
+}
         }, {
             id: 4,
+            name: 'Past Health Issues',
+            isShared: false,
+            formData:
+{
+    "name": "General Health Form",
+    "fields": [
+        {
+            "key": "Reason for visit",
+            "value": "appointment/checkup"
+        },
+        {
+            "key": "Insurance provider",
+            "value": "Medical Mutual"
+        },
+        {
+            "key": "Social Security Number",
+            "value": "123-45-6789"
+        },
+        {
+            "key": "Contact Information",
+            "value": "867-5309"
+        }
+    ]
+}
+        }, {
+            id: 5,
+            name: 'Insurance Information',
+            isShared: false,
+            formData:
+{
+    "name": "General Health Form",
+    "fields": [
+        {
+            "key": "Reason for visit",
+            "value": "appointment/checkup"
+        },
+        {
+            "key": "Insurance provider",
+            "value": "Medical Mutual"
+        },
+        {
+            "key": "Social Security Number",
+            "value": "123-45-6789"
+        },
+        {
+            "key": "Contact Information",
+            "value": "867-5309"
+        }
+    ]
+}
+        }, {
+            id: 6,
+            name: 'Dentist Information',
+            isShared: false,
+            formData:
+{
+    "name": "General Health Form",
+    "fields": [
+        {
+            "key": "Reason for visit",
+            "value": "appointment/checkup"
+        },
+        {
+            "key": "Insurance provider",
+            "value": "Medical Mutual"
+        },
+        {
+            "key": "Social Security Number",
+            "value": "123-45-6789"
+        },
+        {
+            "key": "Contact Information",
+            "value": "867-5309"
+        }
+    ]
+}
+        }, {
+            id: 7,
             name: 'Checkup Paperwork',
             isShared: false,
-            formData: "tbd"
-
+            formData:
+{
+    "name": "General Health Form",
+    "fields": [
+        {
+            "key": "Reason for visit",
+            "value": "appointment/checkup"
+        },
+        {
+            "key": "Insurance provider",
+            "value": "Medical Mutual"
+        },
+        {
+            "key": "Social Security Number",
+            "value": "123-45-6789"
+        },
+        {
+            "key": "Contact Information",
+            "value": "867-5309"
+        }
+    ]
+}
         }];
 
         return {
