@@ -74,13 +74,13 @@
                 <ion-item ng-repeat="item in forms">
                     <h2 ng-show="!item.isShared">{{item.name}}</h2>
                     <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled custom-icon" ng-show="item.isShared"></i> {{item.name}}</h2>
-                    <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#64eeda">
+                    <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
                         Select
                     </ion-option-button>
-                    <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)">
+                    <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
                         Unselect
                     </ion-option-button>
-                    <ion-option-button class="button-info" ng-click="setEditDoc(item)">
+                    <ion-option-button class="button-info" ng-click="setEditDoc(item)" style="background-color:#d9d9d9">
                         Edit
                     </ion-option-button>
                 </ion-item>
@@ -131,7 +131,7 @@
 
     <div ng-show="viewEditDoc">
       <ion-header-bar class="bar-royal">
-        <a ng-click="setViewForms()" class="button ion-android-arrow-back ion-chevron-left button-clear"></a>
+        <a ng-click="setViewForms()" class="button icon-left ion-chevron-left button-clear">&nbsp;&nbsp;Back</a>
         <h1 class="title">{{ mainDoc.name }}</h1>
       </ion-header-bar>
 
