@@ -1,0 +1,78 @@
+{
+    "name": "Child Past Medical History",
+    "description": "Please Please check if your child has had any of the following.",
+    "conditions": [
+        {
+            "condition": "Asthma/wheezing",
+            "value": false
+        },
+        {
+            "condition": "Blood: anemia (iron deficiency, Sickle Cell, Thalessemia)",
+            "value": false
+        },
+        {
+            "condition": "Blood transfusions",
+            "value": false
+        },
+        {
+            "condition": "Chicken pox (Varicella)",
+            "value": false
+        },
+        {
+            "condition": "Contusions",
+            "value": false
+        },
+        {
+            "condition": "Convulsions",
+            "value": false
+        },
+        {
+            "condition": "Fractures",
+            "value": false
+        },
+        {
+            "condition": "German Measles (Rubella)",
+            "value": false
+        },
+        {
+            "condition": "Hearing problems",
+            "value": false
+        },
+        {
+            "condition": "Hospitalizations",
+            "value": false
+        },
+        {
+            "condition": "Measles (Rubeola)",
+            "value": false
+        },
+        {
+            "condition": "Meningitis",
+            "value": false
+        },
+        {
+            "condition": "Mumps",
+            "value": false
+        },
+        {
+            "condition": "Operations",
+            "value": false
+        },
+        {
+            "condition": "Poison ingestion",
+            "value": false
+        },
+        {
+            "condition": "Temper tantrums",
+            "value": false
+        },
+        {
+            "condition": "Visual problems",
+            "value": false
+        },
+        {
+            "condition": "Other serious medical illnesses",
+            "value": false
+        }
+    ]
+}
