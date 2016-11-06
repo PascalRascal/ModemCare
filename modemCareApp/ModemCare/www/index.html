@@ -65,8 +65,7 @@
 
 
     <!-- was ion-plus -->
-    <ion-floating-button click="transmitData()" has-footer="false" button-color="#2AC9AA" icon="ion-paper-airplane" iconColor="#fff">
-
+    <ion-floating-button click="transmitData()" has-footer="false" button-color="#502274" icon="ion-paper-airplane" iconColor="#dedede">
     </ion-floating-button>
     <ion-content>
       <div>
@@ -74,9 +73,9 @@
         <ion-list can-swipe="true">
                 <ion-item ng-repeat="item in forms">
                     <h2 ng-show="!item.isShared">{{item.name}}</h2>
-                    <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled" ng-show="item.isShared"></i>  {{item.name}}</h2>
+                    <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled custom-icon" ng-show="item.isShared"></i>  {{item.name}}</h2>
                     <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)">
-                        Share
+                        Select
                     </ion-option-button>
                     <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)">
                         Unselect
@@ -117,7 +116,7 @@
 
           </div>
 
-          <ion-floating-button ng-click="setEditDoc(mainDoc.index)" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
+          <ion-floating-button ng-click="setEditDoc(mainDoc.index)" has-footer="false" button-color="#502274" icon="ion-edit" iconColor="#dedede">
           </ion-floating-button>
           <!-- <ion-floating-button ng-click="editForm('/edit-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
           </ion-floating-button> -->
@@ -132,7 +131,7 @@
 
     <div ng-show="viewEditDoc">
       <ion-header-bar class="bar-royal">
-        <a ng-click="setViewForms()" class="button icon-left ion-chevron-left button-clear">Back</a>
+        <a ng-click="setViewForms()" class="button ion-android-arrow-back ion-chevron-left button-clear"></a>
         <h1 class="title">{{ mainDoc.name }}</h1>
       </ion-header-bar>
 
@@ -149,7 +148,7 @@
         </div>
 
         
-        <ion-floating-button ng-click="setViewForms()" has-footer="false" button-color="#2AC9AA" icon="ion-checkmark" iconColor="#fff">
+        <ion-floating-button ng-click="setViewForms()" has-footer="false" button-color="#502274" icon="ion-checkmark" iconColor="#dedede">
         </ion-floating-button>
 
 
