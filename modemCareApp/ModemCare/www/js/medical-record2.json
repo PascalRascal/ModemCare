@@ -3,75 +3,75 @@
     "description" : "Please check the items that you ever have, or had.",
     "conditions" : [
         {
-            "condition": "anemia",
+            "condition": "Anemia",
             "value": false
         },
         {
-            "condition": "anorexia",
+            "condition": "Anorexia",
             "value": false
         },
         {
-            "condition": "arthritis",
+            "condition": "Arthritis",
             "value": false
         },
         {
-            "condition": "asthma",
+            "condition": "Asthma",
             "value": false
         },
         {
-            "condition": "cancer",
+            "condition": "Cancer",
             "value": false
         },
         {
-            "condition": "chicken pox",
+            "condition": "Chicken pox",
             "value": false
         },
         {
-            "condition": "depression",
+            "condition": "Depression",
             "value": false
         },
         {
-            "condition": "diabetes",
+            "condition": "Diabetes",
             "value": false
         },
         {
-            "condition": "eating problems",
+            "condition": "Eating problems",
             "value": false
         },
         {
-            "condition": "epilepsy or seizures",
+            "condition": "Epilepsy or seizures",
             "value": false
         },
         {
-            "condition": "heart disease",
+            "condition": "Heart disease",
             "value": false
         },
         {
-            "condition": "high/low blood pressure",
+            "condition": "High/low blood pressure",
             "value": false
         },
         {
-            "condition": "melanoma",
+            "condition": "Melanoma",
             "value": false
         },
         {
-            "condition": "menstrual problems",
+            "condition": "Menstrual problems",
             "value": false
         },
         {
-            "condition": "migraines",
+            "condition": "Migraines",
             "value": false
         },
         {
-            "condition": "sexually transmitted disease",
+            "condition": "Sexually transmitted disease",
             "value": false
         },
         {
-            "condition": "thyroid problems",
+            "condition": "Thyroid problems",
             "value": false
         },
         {
-            "condition": "other",
+            "condition": "Other",
             "value": false
         }
     ]
