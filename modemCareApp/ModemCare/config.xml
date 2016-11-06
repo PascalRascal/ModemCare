@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.modemcare267910" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>modemCare</name>
+  <name>ModemCare</name>
   <description>&#xD;
-        An Ionic Framework and Cordova project.&#xD;
+        A cool hackathon project.&#xD;
     </description>
   <author email="you@example.com" href="http://example.com.com/">&#xD;
-      Your Name Here&#xD;
+      Blaise, Michael, and Nic from Ohio State&#xD;
     </author>
   <content src="index.html"/>
   <access origin="*"/>
