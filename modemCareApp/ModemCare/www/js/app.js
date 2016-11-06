@@ -25,6 +25,8 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
 
   .controller('TheCtrl', function ($scope, Forms) {
 
+    $scope.isTransmitting = false;
+
     $scope.viewForms = true;
     $scope.viewStaticDoc = false;
     $scope.viewEditDoc = false;
@@ -40,6 +42,9 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
       var formsToSend = [];
 
       console.log($scope.forms[0]);
+
+      $scope.isTransmitting = true;
+
       // for (form in $scope.forms) {
       //   console.log(form.isShared);
       //   console.log(form);
@@ -64,7 +69,12 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
       var dataToSend = angular.toJson(formsToSend);
       console.log(dataToSend);
 
-      var onFinish = function () { console.log("finished transmitting!") };
+      var onFinish = function () {
+        console.log("finished transmitting!");
+
+        $scope.isTransmitting = false;
+        $scope.$apply();
+      };
       var transmit = Quiet.transmitter({ profile: "audible", onFinish: onFinish });
       transmit.transmit(Quiet.str2ab(dataToSend));
       $scope.varWord = $scope.varWord + "!";
