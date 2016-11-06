@@ -3716,10 +3716,16 @@ a.subdued {
     padding-right: 0; }
 
 /**
- * 
+ * Custom class formatting extensions
+ * --------------------------------------------------
  */
 .custom-icon {
   color : #c179b9;
+}
+
+.custom-button {
+  width: 100px;
+  text-align: center;
 }
 
 /**
