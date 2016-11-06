@@ -89,8 +89,34 @@
     </div>
 
     <div ng-show="!viewForms">
+
+      <ion-header-bar class="bar-royal">
+        <h1 class="title">{{ mainDoc.name }}</h1>
+      </ion-header-bar>
+
       <ion-content>
-        ANOTHER VIEW
+
+
+        <!-- <div ng-controller="StaticPageCtrl"> -->
+          <!-- <div class="bar bar-header bar-royal">
+            <h1 class="title">{{ mainDoc.name }}</h1>
+          </div> -->
+          
+
+          <div class="list card" ng-repeat="field in mainDoc.formData.fields">
+
+            <a href="#" class="item item-icon-left">
+              <b>{{ field.key + ": "}}</b>{{ field.value }}
+            </a>
+
+          </div>
+
+          <ion-floating-button ng-click="editForm('/edit-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
+          </ion-floating-button>
+
+        <!-- </div> -->
+
+
       </ion-content>
     </div>
 

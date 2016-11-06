@@ -48,6 +48,7 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
 
     $scope.mainDoc = $scope.forms[0];
     $scope.setViewDoc = function(item) {
+      //$scope.mainDoc = $scope.forms[item];
 
       $scope.viewForms = false;
       $scope.mainDoc = item;
