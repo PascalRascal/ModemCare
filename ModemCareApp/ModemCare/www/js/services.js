@@ -154,7 +154,7 @@ angular.module('modemHealth.Forms', [])
             "value": "none"
         },
         {
-            "key": "Blood: anemia (iron deficiency, Sickle Cell, Thalessemia)",
+            "key": "Blood: anemia",
             "value": "none"
         },
         {
