@@ -3977,12 +3977,12 @@ a.subdued {
     .bar.bar-energized.bar-footer {
       background-image: linear-gradient(180deg, #e6b500, #e6b500 50%, transparent 50%); }
   .bar.bar-royal {
-    border-color: #6b46e5;
-    background-color: #886aea;
+    border-color: #502274;
+    background-color: #502274 ;
     background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
-    color: #fff; }
+    color: #dedede; }
     .bar.bar-royal .title {
-      color: #fff; }
+      color: #dedede; }
     .bar.bar-royal.bar-footer {
       background-image: linear-gradient(180deg, #6b46e5, #6b46e5 50%, transparent 50%); }
   .bar.bar-dark {
