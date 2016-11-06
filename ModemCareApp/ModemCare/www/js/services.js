@@ -22,7 +22,7 @@ angular.module('modemHealth.Forms', [])
             "value": "abbott"
         },
         {
-            "key": "D.O.B. (MM/DD/YYYY)",
+            "key": "Date of Birth (MM/DD/YYYY)",
             "value": ""
         },
         {

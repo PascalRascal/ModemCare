@@ -26,6 +26,8 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
   .controller('TheCtrl', function ($scope, Forms) {
 
     $scope.viewForms = true;
+    $scope.viewStaticDoc = false;
+    $scope.viewEditDoc = false;
 
     $scope.forms = Forms.all();
     $scope.varWord = "say this";
@@ -51,8 +53,27 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
       //$scope.mainDoc = $scope.forms[item];
 
       $scope.viewForms = false;
+      $scope.viewStaticDoc = true;
+      $scope.viewEditDoc = false;
+
+
       $scope.mainDoc = item;
-      console.log(item);
+      //console.log(item);
+    };
+
+    $scope.setEditDoc = function(item) {
+      //$scope.mainDoc = $scope.forms[item];
+
+      $scope.viewForms = false;
+      $scope.viewStaticDoc = false;
+      $scope.viewEditDoc = true;
+    };
+
+
+    $scope.setViewForms = function() {
+      $scope.viewForms = true;
+      $scope.viewStaticDoc = false;
+      $scope.viewEditDoc = false;
     };
 
 

@@ -88,7 +88,7 @@
 
     </div>
 
-    <div ng-show="!viewForms">
+    <div ng-show="viewStaticDoc">
 
       <ion-header-bar class="bar-royal">
         <h1 class="title">{{ mainDoc.name }}</h1>
@@ -111,10 +111,41 @@
 
           </div>
 
-          <ion-floating-button ng-click="editForm('/edit-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
+          <ion-floating-button ng-click="setEditDoc(mainDoc.index)" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
           </ion-floating-button>
+          <!-- <ion-floating-button ng-click="editForm('/edit-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-edit" iconColor="#fff">
+          </ion-floating-button> -->
 
         <!-- </div> -->
+
+
+      </ion-content>
+    </div>
+
+
+
+    <div ng-show="viewEditDoc">
+      <ion-header-bar class="bar-royal">
+        <h1 class="title">{{ mainDoc.name }}</h1>
+      </ion-header-bar>
+
+      <ion-content>
+
+
+        <div class="list card" ng-repeat="field in mainDoc.formData.fields">
+
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">{{ field.key }}</span>
+              <input type="text" value="{{field.value}}">
+            </label>
+
+        </div>
+
+        
+        <ion-floating-button ng-click="setViewForms()" has-footer="false" button-color="#2AC9AA" icon="ion-checkmark" iconColor="#fff">
+        </ion-floating-button>
+        <!-- <ion-floating-button ng-click="saveForm('/static-page.html')" has-footer="false" button-color="#2AC9AA" icon="ion-checkmark" iconColor="#fff">
+        </ion-floating-button> -->
 
 
       </ion-content>
