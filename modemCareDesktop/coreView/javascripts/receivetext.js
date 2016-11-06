@@ -7,6 +7,8 @@ var initReceiver = function () {
         content: new ArrayBuffer(0)
     };
 
+document.medicalDocuments = {"documents":[]};
+console.log(document.medicalDocuments);
 
     var receiverOnReceive = function (payload) { onReceive(payload, recvObj); };
     var receiverOnReceiverCreateFail = function (reason) { onReceiverCreateFail(reason, recvObj); };
@@ -50,6 +52,9 @@ var initReceiver = function () {
             if(currentTime - timeOfLastUpdate > 900){
                 console.log("Finished listening!");
                 console.log(recvObj.textContent);
+                var medicalData = JSON.parse(recvObj.textContent);
+                Window.medicalDocuments.push(medicalData);
+                recvObj.textContent = "";
             }
         }, 1000);
         var content = Quiet.ab2str(recvPayload);

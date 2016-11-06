@@ -11,7 +11,6 @@
   <script type="text/javascript" src="javascripts/quiet-init.js"></script>
   <script async type="text/javascript" src="javascripts/quiet-emscripten.js"></script>
   <script type="text/javascript" src="javascripts/sendtext.js"></script>
-  <script type="text/javascript" src="javascripts/receivetext.js"></script>
   <link rel="stylesheet" href="stylesheets/font-awesome.css">
   <link rel="stylesheet" href="stylesheets/font-awesome-animation.css">
 
@@ -34,43 +33,54 @@
 
 <body>
   <div ng-app="modemApp">
-  <div ng-controller="TheCtrl as modemCtrl">
+    <div ng-controller="TheCtrl as modemCtrl">
 
-  <div id="sidebar-wrapper">
-    <ul id="sidebar"class="sidebar-nav">
+      <div id="sidebar-wrapper">
+        <ul id="sidebar" class="sidebar-nav">
 
-      <li class="sidebar-brand">
-        <a href="#">
-                        Documents
-                    </a>
-      </li>
+          <li class="sidebar-brand">
+            <div ng-click="modemCtrl.toggleMedData();">
+              <a href="#">
+                        Brutus Buckeye
+            </a>
+              <div ng-click="modemCtrl.addPatient();"id="addPatient">
+                <a href="#">
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
 
-      <!--  <li ng-repeat="todo in todoList.todos"> -->
-      <!--<li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc({{doc.index}})">{{doc.name}}</a></li> -->
-      <li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc(doc.index)">{{doc.name}}</a></li>
+
+          </li>
 
 
-    </ul>
-  </div>
-  <div id="startListening" class="startListening center-block" style="text-align: center">
-    
-    <div ng-show="modemCtrl.showMain">
-      <i id="mainIcon" class="fa fa-stethoscope" aria-hidden="true"></i>
-      <br>
-      <div id="userPrompt">
-        Start Listening!
+
+          <!--  <li ng-repeat="todo in todoList.todos"> -->
+          <!--<li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc({{doc.index}})">{{doc.name}}</a></li> -->
+          <li ng-repeat="doc in modemCtrl.docs"><a href="#" ng-click="modemCtrl.selectDoc(doc.index)">{{doc.name}}</a></li>
+        </ul>
       </div>
+
+      <div id="startListening" class="startListening center-block" style="text-align: center">
+
+        <div ng-show="modemCtrl.showMain">
+          <i id="mainIcon" class="fa fa-stethoscope" aria-hidden="true"></i>
+          <br>
+          <div id="userPrompt">
+            Start Listening!
+          </div>
+        </div>
+      </div>
+      <div id="formData" ng-show="!modemCtrl.showMain" class="center-block">
+        
+        <div ng-bind-html="modemCtrl.mainDoc.data | trust"></div>
+      </div>
+
+
+
     </div>
-
-    <div ng-show="!modemCtrl.showMain">
-      {{modemCtrl.mainDoc.data}}
-    </div>
-
-
   </div>
-
-</div>
-</div>
+  </div>
 </body>
 
 </html>
