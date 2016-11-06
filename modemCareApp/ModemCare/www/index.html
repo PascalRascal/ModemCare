@@ -59,33 +59,34 @@
 
     <div ng-show="viewForms">
 
-    <ion-floating-button click="transmitData()" bottom="10" has-footer="false" button-color="#502274" icon="ion-paper-airplane" iconColor="#dedede">
-    </ion-floating-button>
-    <ion-content>
-      <div>
+      <ion-floating-button click="transmitData()" bottom="10" has-footer="false" button-color="#502274" icon="ion-paper-airplane"
+        iconColor="#dedede">
+      </ion-floating-button>
+      <ion-content>
+        <div>
 
-        <ion-list can-swipe="true">
-                <ion-item ng-repeat="item in forms">
-                    <h2 ng-show="!item.isShared">{{item.name}}</h2>
-                    <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled custom-icon" ng-show="item.isShared"></i> {{item.name}}</h2>
-                    <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
-                        Select
-                    </ion-option-button>
-                    <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
-                        Unselect
-                    </ion-option-button>
-                    <ion-option-button class="button-info" ng-click="setEditDoc(item)" style="background-color:#d9d9d9">
-                        Edit
-                    </ion-option-button>
-                </ion-item>
-            </ion-list>
+          <ion-list can-swipe="true">
+            <ion-item ng-repeat="item in forms">
+              <h2 ng-show="!item.isShared">{{item.name}}</h2>
+              <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled custom-icon" ng-show="item.isShared"></i> {{item.name}}</h2>
+              <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
+                Select
+              </ion-option-button>
+              <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)" style="background-color:#c179b9">
+                Unselect
+              </ion-option-button>
+              <ion-option-button class="button-info" ng-click="setEditDoc(item)" style="background-color:#d9d9d9">
+                Edit
+              </ion-option-button>
+            </ion-item>
+          </ion-list>
 
-      </div>
-    </ion-content>
+        </div>
+      </ion-content>
 
-    <ion-footer-bar align-title="center" ng-show="isTransmitting" class="bar-royal" ng-click="setViewForms()">
-      <h1 class="title" style="font-weight: 400"><b>Transmitting Data...</b></h1>
-    </ion-footer-bar>
+      <ion-footer-bar align-title="center" ng-show="isTransmitting" class="bar-royal" ng-click="setViewForms()">
+        <h1 class="title" style="font-weight: 400"><b>Transmitting Data...</b></h1>
+      </ion-footer-bar>
     </div>
 
     <div ng-show="viewEditDoc">
@@ -98,7 +99,7 @@
 
         <div class="list card" ng-repeat="field in mainDoc.formData.fields">
 
-            <label class="item item-input item-stacked-label">
+          <label class="item item-input item-stacked-label">
               <span class="input-label"><b>{{ field.key }}</b></span>
               <input type="text" ng-model="field.value" value="{{field.value}}">
             </label>
@@ -107,7 +108,7 @@
 
       </ion-content>
 
-<ion-footer-bar align-title="center" class="bar-royal" ng-click="setViewForms()">
+      <ion-footer-bar align-title="center" class="bar-royal" ng-click="setViewForms()">
         <h1 class="title" style="font-weight: 400"><b>Update</b></h1>
       </ion-footer-bar>
 
@@ -117,4 +118,3 @@
 </body>
 
 </html>
-
