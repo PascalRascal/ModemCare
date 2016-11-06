@@ -33,9 +33,22 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
     $scope.varWord = "say this";
 
     $scope.transmitData = function () {
+
+      // for (i = 0; i < $scope.forms.length; i++) {
+      //   console.log("oh fug");
+      // }
+      var formsToSend = [];
+
+      for (form in $scope.forms) {
+        if (form.isShared) {
+          formsToSend.push(form);
+        }
+      }
+      var dataToSend = JSON.stringify(formsToSend);
+
       var onFinish = function () { console.log("finished transmitting!") };
       var transmit = Quiet.transmitter({ profile: "audible", onFinish: onFinish });
-      transmit.transmit(Quiet.str2ab("fug xd"));
+      transmit.transmit(Quiet.str2ab(dataToSend));
       $scope.varWord = $scope.varWord + "!";
     };
 
@@ -74,6 +87,10 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
       $scope.viewForms = true;
       $scope.viewStaticDoc = false;
       $scope.viewEditDoc = false;
+    };
+
+    $scope.toggleShare = function(item) {
+      item.isShared = !item.isShared;
     };
 
 
