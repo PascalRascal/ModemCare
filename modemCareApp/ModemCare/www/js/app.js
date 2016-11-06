@@ -39,12 +39,29 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
       // }
       var formsToSend = [];
 
-      for (form in $scope.forms) {
+      console.log($scope.forms[0]);
+      // for (form in $scope.forms) {
+      //   console.log(form.isShared);
+      //   console.log(form);
+      //   if (form.isShared) {
+      //     console.log("FOUND ONE!?!?!?");
+      //     formsToSend.push(form);
+      //   }
+      // }
+
+      for (i = 0; i < $scope.forms.length; i++) {
+        var form = $scope.forms[i];
         if (form.isShared) {
+          console.log("FOUND ONE!?!?!?");
           formsToSend.push(form);
         }
       }
+
+
+      console.log($scope.forms.length);
+      console.log(formsToSend.length);
       var dataToSend = JSON.stringify(formsToSend);
+      console.log(dataToSend);
 
       var onFinish = function () { console.log("finished transmitting!") };
       var transmit = Quiet.transmitter({ profile: "audible", onFinish: onFinish });

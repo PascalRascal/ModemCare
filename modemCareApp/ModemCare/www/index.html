@@ -51,7 +51,7 @@
 <body ng-app="starter">
 
   <ion-pane ng-controller="TheCtrl as thing">
-    <ion-header-bar class="bar-stable">
+    <ion-header-bar class="bar-royal">
       <h1 class="title">ModemCare</h1>
     </ion-header-bar>
 
@@ -71,10 +71,13 @@
         <ion-list can-swipe="true">
                 <ion-item ng-repeat="item in forms">
                     <h2>{{item.name}}!</h2>
-                    <ion-option-button class="button-positive" ng-click="toggleShare(item)">
+                    <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)">
                         Share
                     </ion-option-button>
-                    <ion-option-button class="button-info" ng-click="setViewDoc(item)">
+                    <ion-option-button ng-show="item.isShared" class="button-positive" ng-click="toggleShare(item)">
+                        Unselect
+                    </ion-option-button>
+                    <ion-option-button class="button-info" ng-click="setEditDoc(item)">
                         Edit
                     </ion-option-button>
 
