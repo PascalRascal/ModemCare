@@ -71,7 +71,7 @@
         <ion-list can-swipe="true">
                 <ion-item ng-repeat="item in forms">
                     <h2 ng-show="!item.isShared">{{item.name}}</h2>
-                    <h2 ng-show="item.isShared">{{item.name}} - SELECTED</h2>
+                    <h2 ng-show="item.isShared"><i class="icon ion-checkmark-circled" ng-show="item.isShared"></i>  {{item.name}}</h2>
                     <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)">
                         Share
                     </ion-option-button>
