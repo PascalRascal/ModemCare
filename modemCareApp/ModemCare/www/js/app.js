@@ -60,7 +60,8 @@ angular.module('starter', ['ionic', 'modemHealth.Forms', 'ion-floating-menu'])
 
       console.log($scope.forms.length);
       console.log(formsToSend.length);
-      var dataToSend = JSON.stringify(formsToSend);
+      // var dataToSend = JSON.stringify(formsToSend);
+      var dataToSend = angular.toJson(formsToSend);
       console.log(dataToSend);
 
       var onFinish = function () { console.log("finished transmitting!") };
