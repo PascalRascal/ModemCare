@@ -70,7 +70,8 @@
 
         <ion-list can-swipe="true">
                 <ion-item ng-repeat="item in forms">
-                    <h2>{{item.name}}!</h2>
+                    <h2 ng-show="!item.isShared">{{item.name}}</h2>
+                    <h2 ng-show="item.isShared">{{item.name}} - SELECTED</h2>
                     <ion-option-button ng-show="!item.isShared" class="button-positive" ng-click="toggleShare(item)">
                         Share
                     </ion-option-button>
@@ -80,7 +81,6 @@
                     <ion-option-button class="button-info" ng-click="setEditDoc(item)">
                         Edit
                     </ion-option-button>
-
                 </ion-item>
             </ion-list>
 
@@ -138,7 +138,7 @@
         <div class="list card" ng-repeat="field in mainDoc.formData.fields">
 
             <label class="item item-input item-stacked-label">
-              <span class="input-label">{{ field.key }}</span>
+              <span class="input-label"><b>{{ field.key }}</b></span>
               <input type="text" ng-model="field.value" value="{{field.value}}">
             </label>
 
