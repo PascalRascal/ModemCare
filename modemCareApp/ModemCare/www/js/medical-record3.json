@@ -1,6 +1,6 @@
 {
     "name": "Child Past Medical History",
-    "description": "Please Please check if your child has had any of the following.",
+    "description": "Check if your child has had any of the following.",
     "conditions": [
         {
             "condition": "Asthma/wheezing",

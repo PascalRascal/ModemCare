@@ -1,6 +1,6 @@
 {
     "name" : "Patient History",
-    "description" : "Please check the items that you ever have, or had.",
+    "description" : "Check the items that you ever have, or had.",
     "conditions" : [
         {
             "condition": "Anemia",
